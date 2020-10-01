@@ -1,0 +1,77 @@
+# Auto detect
+*                 text=auto
+
+##### Linux
+*.sh              text eol=lf
+*.so              binary
+
+# Script
+*.bash            text eol=lf
+*.bat             text eol=crlf
+*.cmd             text eol=crlf
+*.sh              text eol=lf
+
+# Front-end file
+*.css             text
+*.htm             text diff=html
+*.html            text diff=html
+
+# Json Format
+*.json            text
+
+# Typescript/Javascirpt
+*.js              text
+*.ts              text
+
+# C/C++
+*.c               text
+*.cc              text
+*.cxx             text
+*.cpp             text
+*.c++             text
+*.hpp             text
+*.h               text
+*.h++             text
+*.hh              text
+*.slo             binary
+*.lo              binary
+*.o               binary
+*.obj             binary
+*.gch             binary
+*.pch             binary
+*.so              binary
+*.dylib           binary
+*.dll             binary
+*.lai             binary
+*.la              binary
+*.a               binary
+*.lib             binary
+*.exe             binary
+*.out             binary
+*.app             binary
+
+# Docker
+*.dockerignore    text
+Dockerfile        text
+
+# Documentation
+*.md              text
+license           text
+LICENSE           text
+*README*          text
+
+# Linters
+.eslintrc.js      text
+
+# Configs
+*.cnf             text
+*.conf            text
+*.config          text
+.editorconfig     text
+.env              text
+.gitattributes    text
+.gitconfig        text
+.prettierrc       text
+*.yaml            text
+*.yml             text
+Makefile          text

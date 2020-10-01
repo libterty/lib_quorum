@@ -1,0 +1,67 @@
+{
+  "name": "lib_quorum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "start": "ts-node src/index.ts",
+    "start:watch": "tsc --watch",
+    "start:dev": "nodemon",
+    "test": "jest --maxWorkers=2 --detectOpenHandles --forceExit",
+    "test:watch": "jest --watch",
+    "test:watchAll": "jest --watchAll",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint '{src,apps,libs}/**/*.ts' --fix"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/libterty/lib_quorum"
+  },
+  "homepage": "https://github.com/libterty/lib_quorum",
+  "keywords": ["quorum"],
+  "author": "11",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.2",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.1",
+    "tsconfig-paths": "^3.9.0"
+  },
+  "jest": {
+      "moduleFileExtensions": [
+          "node",
+          "js",
+          "json",
+          "ts"
+      ],
+      "rootDir": "test",
+      "testRegex": ".spec.ts$",
+      "transform": {
+          "^.+\\.(t|j)s$": "ts-jest"
+      },
+      "coverageDirectory": "../coverage",
+      "testEnvironment": "node"
+  },
+  "husky": {
+      "hooks": {
+          "pre-commit": "sh scripts/precommit.sh",
+          "pre-push": "sh scripts/prepublish.sh"
+      }
+  }
+}

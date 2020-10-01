@@ -1,0 +1,12 @@
+src/
+.env
+.eslintrc.js
+.prettierrc
+tsconfig.json
+.nodemon.json
+test/
+reports/
+.editorconfig
+.gitattributes
+scripts/
+docs/
