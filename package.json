@@ -22,7 +22,9 @@
     "url": "https://github.com/libterty/lib_quorum"
   },
   "homepage": "https://github.com/libterty/lib_quorum",
-  "keywords": ["quorum"],
+  "keywords": [
+    "quorum"
+  ],
   "author": "11",
   "license": "MIT",
   "dependencies": {
@@ -44,24 +46,24 @@
     "tsconfig-paths": "^3.9.0"
   },
   "jest": {
-      "moduleFileExtensions": [
-          "node",
-          "js",
-          "json",
-          "ts"
-      ],
-      "rootDir": "test",
-      "testRegex": ".spec.ts$",
-      "transform": {
-          "^.+\\.(t|j)s$": "ts-jest"
-      },
-      "coverageDirectory": "../coverage",
-      "testEnvironment": "node"
+    "moduleFileExtensions": [
+      "node",
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "test",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
   },
   "husky": {
-      "hooks": {
-          "pre-commit": "sh scripts/precommit.sh",
-          "pre-push": "sh scripts/prepublish.sh"
-      }
+    "hooks": {
+      "pre-commit": "sh scripts/precommit.sh",
+      "pre-push": "sh scripts/prepublish.sh"
+    }
   }
 }
