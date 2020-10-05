@@ -25,6 +25,5 @@ if [[ "$?" == 1 ]]; then
     echo "\033[31m\xE2\x9C\x96 Format check fail, abort git commit\033[0m"
     exit 1
 fi
-git add .
 
 echo "\033[32m[pre-commit] successfully\033[0m"
