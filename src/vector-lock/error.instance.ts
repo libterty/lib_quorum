@@ -4,14 +4,14 @@
  * @param {string} message Error Message
  */
 class ErrorBase {
-  public readonly stack: string;
-  constructor (private message: string) {
-    if (typeof Error.captureStackTrace === 'function') {
-      Error.captureStackTrace(this, this.constructor);
-    } else {
-      this.stack = (new Error(message)).stack;
+    public readonly stack: string;
+    constructor(private message: string) {
+        if (typeof Error.captureStackTrace === 'function') {
+            Error.captureStackTrace(this, this.constructor);
+        } else {
+            this.stack = new Error(message).stack;
+        }
     }
-  }
 }
 
 /**
@@ -19,9 +19,9 @@ class ErrorBase {
  * @public
  */
 export class EClientRequireErr extends ErrorBase {
-  constructor() {
-    super('client parameter is required');
-  }
+    constructor() {
+        super('client parameter is required');
+    }
 }
 
 /**
@@ -30,9 +30,9 @@ export class EClientRequireErr extends ErrorBase {
  * @public
  */
 export class EKeyRequireErr extends ErrorBase {
-  constructor(type: string) {
-    super(`key parameter of type ${type} is required`);
-  }
+    constructor(type: string) {
+        super(`key parameter of type ${type} is required`);
+    }
 }
 
 /**
@@ -40,9 +40,9 @@ export class EKeyRequireErr extends ErrorBase {
  * @public
  */
 export class ENodeidRequireErr extends ErrorBase {
-  constructor() {
-    super(`node id parameter of type String is required`);
-  }
+    constructor() {
+        super(`node id parameter of type String is required`);
+    }
 }
 
 /**
@@ -50,9 +50,9 @@ export class ENodeidRequireErr extends ErrorBase {
  * @public
  */
 export class ETTLInvalid extends ErrorBase {
-  constructor() {
-    super(`TTL parameter must be typeof number`);
-  }
+    constructor() {
+        super(`TTL parameter must be typeof number`);
+    }
 }
 
 /**
@@ -61,9 +61,9 @@ export class ETTLInvalid extends ErrorBase {
  * @public
  */
 export class ELockExistErr extends ErrorBase {
-  constructor(key: string) {
-    super(`Lock key ${key} is already existed`);
-  }
+    constructor(key: string) {
+        super(`Lock key ${key} is already existed`);
+    }
 }
 
 /**
@@ -73,7 +73,7 @@ export class ELockExistErr extends ErrorBase {
  * @public
  */
 export class ELockRegisterErr extends ErrorBase {
-  constructor(key: string, nodeId: string) {
-    super(`Lock Key ${key} is not registerd to Node ${nodeId}`);
-  }
+    constructor(key: string, nodeId: string) {
+        super(`Lock Key ${key} is not registerd to Node ${nodeId}`);
+    }
 }
