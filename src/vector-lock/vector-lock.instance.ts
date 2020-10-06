@@ -8,23 +8,23 @@ export class LibVectorLock extends EventEmitter {
         super();
     }
 
-    public destory (): void {
+    public destory(): void {
         // destory
-        return
+        return;
     }
 
-    public lock (): void {
+    public lock(): void {
         // lock
-        return
+        return;
     }
 
-    public unLock (): void {
+    public unLock(): void {
         // unLock
-        return
+        return;
     }
 
-    public reNew (): void {
+    public reNew(): void {
         // reNew
-        return
+        return;
     }
 }
