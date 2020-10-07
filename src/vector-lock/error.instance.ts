@@ -77,3 +77,13 @@ export class ELockRegisterErr extends ErrorBase {
         super(`Lock Key ${key} is not registerd to Node ${nodeId}`);
     }
 }
+
+/**
+ * @classdesc Lock Registered Error
+ * @public
+ */
+export class ENameSpaceRequireErr extends ErrorBase {
+    constructor() {
+        super('Namespace parameter must be typeof string');
+    }
+}

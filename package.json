@@ -28,6 +28,7 @@
   "author": "11",
   "license": "MIT",
   "dependencies": {
+    "etcd3": "^1.0.2",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
   },
